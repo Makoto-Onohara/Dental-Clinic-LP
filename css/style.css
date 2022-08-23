@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+/* フォント初期化 */
+* {
+  font-family: 'M PLUS Rounded 1c', 'Noto Sans JP';
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #ccf;
+}
+
+/* ページ全体の背景色 */
+body {
+  background-color: #FFF5D9;
+}
+
+/* ヘッダー */
+header {
+  display: flex; /* 子要素を横並びに */
+  justify-content: space-between; /* 子要素を左右に配置 */
+  align-items: center;
+  background-color: #ED7D22;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+header h1 {
+  color: white;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+header a {
+  text-decoration: un;
+  color: white;
+}
+
+/* メイン */
+main {
+  padding-top: 80px; /* ヘッダーの高さ分 */
+}
+
+/* セクションごとの隙間調整 */
+section {
+  margin-bottom: 60px;
+}
+
+/* トップ画像部分 */
+section.top {
+  display: flex;
+  background-image: url("../img/top.jpg");
+  background-size: cover;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-message {
+  background-color: rgba(255,255,255, 0.7);
+  padding: 60px;
+  border-radius: 10px;
+  color: darkblue;
+}
+
+.top-message h1 {
+  text-align: center;
+  font-size: 2.0rem;
+  font-weight: bolder;
+  letter-spacing: .7rem;
+}
+
+.top-message p {
+  text-align: center;
+  background-color: white;
+  padding: 5px 0;
+  border-radius: 20px;
+}
+
+/* 共通 */
+.container {
+  padding: 0 80px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.img-title-orange {
+  background: #FAC841;
+  color: white;
+  padding: 4px 4px;
+  border-radius: 1rem;
+}
+
+.img-title-pink {
+  background: pink;
+  color: white;
+  padding: 4px 4px;
+  border-radius: 1rem;
+}
+
+/* ３つの特徴セクション */
+.features {
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+.feature img {
+  width: 200px;
+  border-radius: 50%;
+  background-color: #FAC841;
+}
+
+/* 診療案内 */
+.treatment-section {
+  background-color: #FFEEF6;
+  padding: 40px 0;
+}
+
+.treatments {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.treatment {
+  flex: 1;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.treatment img {
+  width: 80%;
+  border-radius: 50%;
+}
+
+.treatment > p {
+  /* display: flexbox; */
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* 説明部分 */
+.description {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.description img {
+  width: 200px;
+  height: 100%;
+}
+
+.description:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.description > div {
+  padding: 0 20px;
+}
+
+.description button {
+  background-color: #2C7BDD;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  padding: 4px 12px;
+}
+
+/* 表 */
+.table-bg-orange {
+  background-color: #F8B500;
+  color: white;
+}
+
+.table-center {
+  margin: 0 auto;
+}
+
+.table-bg-orange, td, th {
+  padding: 16px 16px;
+}
+
+.table-bg-orange thead tr {
+  border-bottom: solid 1px white;
+}
+
+.table-bg-orange td:nth-child(1),
+.table-bg-orange th:nth-child(1) {
+  padding-left: 32px;
+}
+
+.table-bg-orange td:nth-last-child(1),
+.table-bg-orange th:nth-last-child(1) {
+  padding-right: 32px;
+}
+
+/* フッター */
+footer {
+  background-color: #ED7D22;
+  color: white;
+  padding: 20px 0;
+  /* height: 150px; */
+}
+
+.copy-right {
+  margin-bottom: 20px;
+}
+
+footer a {
+  color: white;
+  padding: 0 20px;
+  text-decoration-line: underline;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    padding: 0 16px;
+  }
+  header {
+    flex-direction: column;
+    padding: 12px 0;
+  }
+
+  header h1 {
+    font-size: 24px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .features, .treatments, .description {
+    flex-direction: column !important;
+  }
+
+  .feature, .treatment, .description {
+    margin-bottom: 40px !important;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .treatment img {
+    width: 200px;
+  }
+
+  .description img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .description div{
+    text-align: center;
+  }
+
+  td, th {
+    padding: 8px !important;
+  }
+}
